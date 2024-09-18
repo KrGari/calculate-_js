@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .cantent{
+            
+            background-color: rgba(75, 159, 162, 0.729);
+            padding: 30px;
+            border-radius:10px ;
+            border: 2px solid rgba(3, 74, 77, 0.729);
+        }
+        input{
+            padding: 5px 10px;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+           
+        }
+        h1{
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cantent">
+            <h1>Calculate %</h1>
+            <label for=""> Enter Total Marks </label><br>
+            <input type="text" placeholder="Number" id="marks"><br>
+            <label for=""> Enter Total Subjects No. </label><br>
+            <input type="text" placeholder="Number" id="subjects"><br>
+            <input type="submit" value="Calculate" onclick="Addkaro()"><br>
+            <div class="box">
+                <h3 id="res">Result</h3>
+                <p>%</p>
+
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script>
+        function Addkaro() {
+
+            var a = parseInt(document.getElementById('marks').value);
+            var b = parseInt(document.getElementById('subjects').value);
+
+            var c = a / b;
+            document.getElementById("res").innerHTML = "Result = " + c;
+
+        }
+    </script>
+    
+</body>
+</html>
